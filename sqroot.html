@@ -19,12 +19,12 @@
       document.getElementById("B2").innerHTML = String(r * r);
       document.getElementById("B3").innerHTML = "Click the Square Root<br />&nbsp;";
       document.getElementById("B1").disabled = true;
-      document.getElementById("B1").value = "The Spectator Calls:";
+      document.getElementById("B1").value = "Your challenge:";
       setall();
     }
 
     function cno(x) {
-      if (document.getElementById("B1").value == "Get Spectator's Call") {
+      if (document.getElementById("B1").value == "Click for new number") {
         return;
       }
 
@@ -43,7 +43,7 @@
 
     function resett() {
       document.getElementById("B1").disabled = false;
-      document.getElementById("B1").value = "Get Spectator's Call";
+      document.getElementById("B1").value = "Click for new number";
 
     }
 
@@ -79,7 +79,7 @@
           <tr>
             <td colspan="10">
               <br>
-              <input id="B1" class="btn btn-success btn-lg" type="button" value="Get Spectator's Call"
+              <input id="B1" class="btn btn-success btn-lg" type="button" value="Click for new number"
                 style="width:300px; height:48px; font-size: 24px;" onclick="getno()">
             </td>
           </tr>
