@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    var r = 0;
+    var a = 0;
+    var x = 0;
+    var but$ = "";
+
+    resetall();
+
+    function getno() {
+      if (document.getElementById("B1").value != "Get Spectator's Call") {
+        return;
+      }
+
+      r = (Math.floor(Math.random() * 89) + 10);
+      document.getElementById("B2").innerHTML = String(r * r);
+      document.getElementById("B3").innerHTML = "Click the Square Root<br />&nbsp;";
+      document.getElementById("B1").disabled = true;
+      document.getElementById("B1").value = "The Spectator Calls:";
+      setall();
+    }
+
+    function cno(x) {
+      if (document.getElementById("B1").value == "Get Spectator's Call") {
+        return;
+      }
+
+      a = x;
+
+      if (a == r) {
+        document.getElementById("B3").innerHTML = "CORRECT<br />The Square Root is " + String(a);
+        resett();
+        resetall();
+      } else {
+        but$ = "F" + String(a);
+        document.getElementById("B3").innerHTML = String(a) + " is WRONG<br />Try Again!";
+        document.getElementById(but$).disabled = true;
+      }
+    }
+
+    function resett() {
+      document.getElementById("B1").disabled = false;
+      document.getElementById("B1").value = "Get Spectator's Call";
+
+    }
+
+    function resetall() {
+      for (x = 10; x < 100; x++) {
+        but$ = "F" + String(x);
+        document.getElementById(but$).disabled = true;
+      }
+    }
+
+    function setall() {
+      for (x = 10; x < 100; x++) {
+        but$ = "F" + String(x);
+        document.getElementById(but$).disabled = false;
+      }
+    }
+
+  </script>
+
+  <div class="row">
+    <div class="col-12 text-center d-flex align-items-center justify-content-center">
+
+      <table class="table-responsive" style="border:3px solid black; background-color:linen;">
+
+        <tbody>
+          <tr>
+            <td colspan="10" style="background-color:black; color:white; padding:10px;">
+              <h2>Square Root Tester</h2>
+              <h5>by Psychic Science</h5>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10">
+              <br>
+              <input id="B1" class="btn btn-success btn-lg" type="button" value="Get Spectator's Call"
+                style="width:300px; height:48px; font-size: 24px;" onclick="getno()">
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10" style="color:black;">
+              <p id="B2" style="font-size:40px; font-weight: bold;">&nbsp;</p>
+              <p id="B3" style="font-size:22px;">&nbsp;<br>&nbsp;</p>
+              <hr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input id="F10" class="btn btn-success" type="button" value="10" onclick="cno(10)" disabled="">
+            </td>
+            <td><input id="F11" class="btn btn-success" type="button" value="11" onclick="cno(11)" disabled="">
+            </td>
+            <td><input id="F12" class="btn btn-success" type="button" value="12" onclick="cno(12)" disabled="">
+            </td>
+            <td><input id="F13" class="btn btn-success" type="button" value="13" onclick="cno(13)" disabled="">
+            </td>
+            <td><input id="F14" class="btn btn-success" type="button" value="14" onclick="cno(14)" disabled="">
+            </td>
+            <td><input id="F15" class="btn btn-success" type="button" value="15" onclick="cno(15)" disabled="">
+            </td>
+            <td><input id="F16" class="btn btn-success" type="button" value="16" onclick="cno(16)" disabled="">
+            </td>
+            <td><input id="F17" class="btn btn-success" type="button" value="17" onclick="cno(17)" disabled="">
+            </td>
+            <td><input id="F18" class="btn btn-success" type="button" value="18" onclick="cno(18)" disabled="">
+            </td>
+            <td><input id="F19" class="btn btn-success" type="button" value="19" onclick="cno(19)" disabled="">
+            </td>
+          </tr>
+
+          <tr>
+            <td><input id="F20" class="btn btn-success" type="button" value="20" onclick="cno(20)" disabled="">
+            </td>
+            <td><input id="F21" class="btn btn-success" type="button" value="21" onclick="cno(21)" disabled="">
+            </td>
+            <td><input id="F22" class="btn btn-success" type="button" value="22" onclick="cno(22)" disabled="">
+            </td>
+            <td><input id="F23" class="btn btn-success" type="button" value="23" onclick="cno(23)" disabled="">
+            </td>
+            <td><input id="F24" class="btn btn-success" type="button" value="24" onclick="cno(24)" disabled="">
+            </td>
+            <td><input id="F25" class="btn btn-success" type="button" value="25" onclick="cno(25)" disabled="">
+            </td>
+            <td><input id="F26" class="btn btn-success" type="button" value="26" onclick="cno(26)" disabled="">
+            </td>
+            <td><input id="F27" class="btn btn-success" type="button" value="27" onclick="cno(27)" disabled="">
+            </td>
+            <td><input id="F28" class="btn btn-success" type="button" value="28" onclick="cno(28)" disabled="">
+            </td>
+            <td><input id="F29" class="btn btn-success" type="button" value="29" onclick="cno(29)" disabled="">
+            </td>
+          </tr>
+
+          <tr>
+            <td><input id="F30" class="btn btn-success" type="button" value="30" onclick="cno(30)" disabled="">
+            </td>
+            <td><input id="F31" class="btn btn-success" type="button" value="31" onclick="cno(31)" disabled="">
+            </td>
+            <td><input id="F32" class="btn btn-success" type="button" value="32" onclick="cno(32)" disabled="">
+            </td>
+            <td><input id="F33" class="btn btn-success" type="button" value="33" onclick="cno(33)" disabled="">
+            </td>
+            <td><input id="F34" class="btn btn-success" type="button" value="34" onclick="cno(34)" disabled="">
+            </td>
+            <td><input id="F35" class="btn btn-success" type="button" value="35" onclick="cno(35)" disabled="">
+            </td>
+            <td><input id="F36" class="btn btn-success" type="button" value="36" onclick="cno(36)" disabled="">
+            </td>
+            <td><input id="F37" class="btn btn-success" type="button" value="37" onclick="cno(37)" disabled="">
+            </td>
+            <td><input id="F38" class="btn btn-success" type="button" value="38" onclick="cno(38)" disabled="">
+            </td>
+            <td><input id="F39" class="btn btn-success" type="button" value="39" onclick="cno(39)" disabled="">
+            </td>
+          </tr>
+
+          <tr>
+            <td><input id="F40" class="btn btn-success" type="button" value="40" onclick="cno(40)" disabled="">
+            </td>
+            <td><input id="F41" class="btn btn-success" type="button" value="41" onclick="cno(41)" disabled="">
+            </td>
+            <td><input id="F42" class="btn btn-success" type="button" value="42" onclick="cno(42)" disabled="">
+            </td>
+            <td><input id="F43" class="btn btn-success" type="button" value="43" onclick="cno(43)" disabled="">
+            </td>
+            <td><input id="F44" class="btn btn-success" type="button" value="44" onclick="cno(44)" disabled="">
+            </td>
+            <td><input id="F45" class="btn btn-success" type="button" value="45" onclick="cno(45)" disabled="">
+            </td>
+            <td><input id="F46" class="btn btn-success" type="button" value="46" onclick="cno(46)" disabled="">
+            </td>
+            <td><input id="F47" class="btn btn-success" type="button" value="47" onclick="cno(47)" disabled="">
+            </td>
+            <td><input id="F48" class="btn btn-success" type="button" value="48" onclick="cno(48)" disabled="">
+            </td>
+            <td><input id="F49" class="btn btn-success" type="button" value="49" onclick="cno(49)" disabled="">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><input id="F50" class="btn btn-success" type="button" value="50" onclick="cno(50)" disabled="">
+            </td>
+            <td><input id="F51" class="btn btn-success" type="button" value="51" onclick="cno(51)" disabled="">
+            </td>
+            <td><input id="F52" class="btn btn-success" type="button" value="52" onclick="cno(52)" disabled="">
+            </td>
+            <td><input id="F53" class="btn btn-success" type="button" value="53" onclick="cno(53)" disabled="">
+            </td>
+            <td><input id="F54" class="btn btn-success" type="button" value="54" onclick="cno(54)" disabled="">
+            </td>
+            <td><input id="F55" class="btn btn-success" type="button" value="55" onclick="cno(55)" disabled="">
+            </td>
+            <td><input id="F56" class="btn btn-success" type="button" value="56" onclick="cno(56)" disabled="">
+            </td>
+            <td><input id="F57" class="btn btn-success" type="button" value="57" onclick="cno(57)" disabled="">
+            </td>
+            <td><input id="F58" class="btn btn-success" type="button" value="58" onclick="cno(58)" disabled="">
+            </td>
+            <td><input id="F59" class="btn btn-success" type="button" value="59" onclick="cno(59)" disabled="">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><input id="F60" class="btn btn-success" type="button" value="60" onclick="cno(60)" disabled="">
+            </td>
+            <td><input id="F61" class="btn btn-success" type="button" value="61" onclick="cno(61)" disabled="">
+            </td>
+            <td><input id="F62" class="btn btn-success" type="button" value="62" onclick="cno(62)" disabled="">
+            </td>
+            <td><input id="F63" class="btn btn-success" type="button" value="63" onclick="cno(63)" disabled="">
+            </td>
+            <td><input id="F64" class="btn btn-success" type="button" value="64" onclick="cno(64)" disabled="">
+            </td>
+            <td><input id="F65" class="btn btn-success" type="button" value="65" onclick="cno(65)" disabled="">
+            </td>
+            <td><input id="F66" class="btn btn-success" type="button" value="66" onclick="cno(66)" disabled="">
+            </td>
+            <td><input id="F67" class="btn btn-success" type="button" value="67" onclick="cno(67)" disabled="">
+            </td>
+            <td><input id="F68" class="btn btn-success" type="button" value="68" onclick="cno(68)" disabled="">
+            </td>
+            <td><input id="F69" class="btn btn-success" type="button" value="69" onclick="cno(69)" disabled="">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><input id="F70" class="btn btn-success" type="button" value="70" onclick="cno(70)" disabled="">
+            </td>
+            <td><input id="F71" class="btn btn-success" type="button" value="71" onclick="cno(71)" disabled="">
+            </td>
+            <td><input id="F72" class="btn btn-success" type="button" value="72" onclick="cno(72)" disabled="">
+            </td>
+            <td><input id="F73" class="btn btn-success" type="button" value="73" onclick="cno(73)" disabled="">
+            </td>
+            <td><input id="F74" class="btn btn-success" type="button" value="74" onclick="cno(74)" disabled="">
+            </td>
+            <td><input id="F75" class="btn btn-success" type="button" value="75" onclick="cno(75)" disabled="">
+            </td>
+            <td><input id="F76" class="btn btn-success" type="button" value="76" onclick="cno(76)" disabled="">
+            </td>
+            <td><input id="F77" class="btn btn-success" type="button" value="77" onclick="cno(77)" disabled="">
+            </td>
+            <td><input id="F78" class="btn btn-success" type="button" value="78" onclick="cno(78)" disabled="">
+            </td>
+            <td><input id="F79" class="btn btn-success" type="button" value="79" onclick="cno(79)" disabled="">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><input id="F80" class="btn btn-success" type="button" value="80" onclick="cno(80)" disabled="">
+            </td>
+            <td><input id="F81" class="btn btn-success" type="button" value="81" onclick="cno(81)" disabled="">
+            </td>
+            <td><input id="F82" class="btn btn-success" type="button" value="82" onclick="cno(82)" disabled="">
+            </td>
+            <td><input id="F83" class="btn btn-success" type="button" value="83" onclick="cno(83)" disabled="">
+            </td>
+            <td><input id="F84" class="btn btn-success" type="button" value="84" onclick="cno(84)" disabled="">
+            </td>
+            <td><input id="F85" class="btn btn-success" type="button" value="85" onclick="cno(85)" disabled="">
+            </td>
+            <td><input id="F86" class="btn btn-success" type="button" value="86" onclick="cno(86)" disabled="">
+            </td>
+            <td><input id="F87" class="btn btn-success" type="button" value="87" onclick="cno(87)" disabled="">
+            </td>
+            <td><input id="F88" class="btn btn-success" type="button" value="88" onclick="cno(88)" disabled="">
+            </td>
+            <td><input id="F89" class="btn btn-success" type="button" value="89" onclick="cno(89)" disabled="">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><input id="F90" class="btn btn-success" type="button" value="90" onclick="cno(90)" disabled="">
+            </td>
+            <td><input id="F91" class="btn btn-success" type="button" value="91" onclick="cno(91)" disabled="">
+            </td>
+            <td><input id="F92" class="btn btn-success" type="button" value="92" onclick="cno(92)" disabled="">
+            </td>
+            <td><input id="F93" class="btn btn-success" type="button" value="93" onclick="cno(93)" disabled="">
+            </td>
+            <td><input id="F94" class="btn btn-success" type="button" value="94" onclick="cno(94)" disabled="">
+            </td>
+            <td><input id="F95" class="btn btn-success" type="button" value="95" onclick="cno(95)" disabled="">
+            </td>
+            <td><input id="F96" class="btn btn-success" type="button" value="96" onclick="cno(96)" disabled="">
+            </td>
+            <td><input id="F97" class="btn btn-success" type="button" value="97" onclick="cno(97)" disabled="">
+            </td>
+            <td><input id="F98" class="btn btn-success" type="button" value="98" onclick="cno(98)" disabled="">
+            </td>
+            <td><input id="F99" class="btn btn-success" type="button" value="99" onclick="cno(99)" disabled="">
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10">
+              <hr>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</body>
+
+</html>
